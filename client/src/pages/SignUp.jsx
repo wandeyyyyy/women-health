@@ -1,10 +1,7 @@
 import React from 'react' 
 import { useState } from 'react';
 import {Link} from "react-router-dom"
-import {Label} from "flowbite-react"
-import {Alert} from "flowbite-react"
-import { TextInput } from 'flowbite-react'
-import { Button } from 'flowbite-react'
+import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
 
 const SignUp = () => {
   const [formData, setFormData] = useState({});
@@ -84,7 +81,14 @@ const SignUp = () => {
             <Button
              gradientDuoTone='purpleToPink'
              type='submit'>
-              Sign Up
+            {loading ? (
+                <>
+                  <Spinner size='sm' />
+                  <span className='pl-3'>Loading...</span>
+                </>
+              ) : (
+                'Sign Up'
+              )}
              </Button>
         </form>
         <div className='flex gap-2 text-sm font-medium mt-5'>
