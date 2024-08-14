@@ -6,9 +6,9 @@ import React from 'react'
 const FooterCom = () => {
   return (
     <Footer container className='border border-t-8 border-teal-500'>
-        <div>
-            <div>
-                <div>
+        <div  className='w-full max-w-7xl mx-auto'>
+            <div className='grid w-full justify-between sm:flex md:grid-cols-1'>
+                <div className='mt-5'>
                 <Link to="/" className="self-center whitespace-nowrap text-lg sm:text-xl font-bold dark:text-white">
 <span className="p-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">Women's</span> Health
 </Link>  
