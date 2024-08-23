@@ -1,6 +1,6 @@
 const bcryptjs = require('bcryptjs')
-import {errorHandler} from '../utils/error.js'
-import User from '../models/user.model.js';
+const  {errorHandler} = require('../utils/error.js')
+const User =require('../models/user.model.js');
 const test = (req, res) => {
     res.send("Hello World People");
 }

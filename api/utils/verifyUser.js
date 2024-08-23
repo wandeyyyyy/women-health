@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
-import {errorHandler} from './erroor'
-import React from 'react'
+const {errorHandler} = require('./error')
+
 
 const verifyToken = (req, res, next) => {
  const token = req.cookies.access_token
@@ -18,4 +18,4 @@ const verifyToken = (req, res, next) => {
   });
 }
 
-export default verifyToken
+module.exports = verifyToken
